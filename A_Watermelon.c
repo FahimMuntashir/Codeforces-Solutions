@@ -1,26 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
     int n;
     scanf("%d", &n);
 
-    if (n%2==0 || n%4==0)
+    if (n % 2 == 0 || n % 4 == 0)
     {
-        if (n==2)
+        if (n == 2)
         {
             printf("NO\n");
-        }else
+        }
+        else
         {
             printf("YES\n");
         }
-        
-        
-        
-    }else
+    }
+    else
     {
         printf("NO\n");
     }
-    
-    
 }
