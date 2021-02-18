@@ -22,25 +22,20 @@ const double eps = 1e-9;
 int main()
 {
     f12r;
-    int y;
-    cin >> y;
-    
-
-    while (true)
+    int n;
+    cin >> n;
+    // int arr[n];
+    double sum = 0;
+    int temp = n;
+    while (n--)
     {
-        y++;
-        int a = y / 1000;
-        int b = (y / 100) % 10;
-        int c = (y / 10) % 10;
-        int d = y % 10;
-
-        if (a != b && a != c && a != d && b != c && b != d && c != d)
-        {
-            break;
-        }
+        int t;
+        cin >> t;
+        sum += t;
     }
+    double ans = (sum / 100) / temp;
 
-    cout << y << endl;
+    cout << fixed << setprecision(12) << ans * 100 << endl;
 
     return 0;
 }

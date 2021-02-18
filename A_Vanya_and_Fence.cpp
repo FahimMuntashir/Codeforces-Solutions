@@ -22,25 +22,27 @@ const double eps = 1e-9;
 int main()
 {
     f12r;
-    int y;
-    cin >> y;
-    
-
-    while (true)
+    int n, h;
+    cin >> n >> h;
+    int arr[n];
+    for (int i = 0; i < n; i++)
     {
-        y++;
-        int a = y / 1000;
-        int b = (y / 100) % 10;
-        int c = (y / 10) % 10;
-        int d = y % 10;
-
-        if (a != b && a != c && a != d && b != c && b != d && c != d)
-        {
-            break;
-        }
+        cin >> arr[i];
     }
 
-    cout << y << endl;
+    int count = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] > h)
+        {
+            count += 2;
+        }
+        else
+        {
+            count += 1;
+        }
+    }
+    cout << count << endl;
 
     return 0;
 }

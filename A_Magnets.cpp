@@ -21,26 +21,28 @@ const double eps = 1e-9;
 
 int main()
 {
+    vector<int> vec;
     f12r;
-    int y;
-    cin >> y;
-    
+    int t;
+    cin >> t;
 
-    while (true)
+    while (t--)
     {
-        y++;
-        int a = y / 1000;
-        int b = (y / 100) % 10;
-        int c = (y / 10) % 10;
-        int d = y % 10;
+        int n;
+        cin >> n;
+        vec.push_back(n);
+    }
 
-        if (a != b && a != c && a != d && b != c && b != d && c != d)
+    int count = 1;
+    for (int i = 0; i < vec.size() - 1; i++)
+    {
+        if (vec[i] != vec[i + 1])
         {
-            break;
+            count++;
         }
     }
 
-    cout << y << endl;
+    cout << count << endl;
 
     return 0;
 }

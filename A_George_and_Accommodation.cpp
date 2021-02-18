@@ -7,6 +7,8 @@
 */
 
 #include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -22,25 +24,21 @@ const double eps = 1e-9;
 int main()
 {
     f12r;
-    int y;
-    cin >> y;
-    
+    int n;
+    cin >> n;
+    int count = 0;
 
-    while (true)
+    for (int i = 1; i <= n; i++)
     {
-        y++;
-        int a = y / 1000;
-        int b = (y / 100) % 10;
-        int c = (y / 10) % 10;
-        int d = y % 10;
-
-        if (a != b && a != c && a != d && b != c && b != d && c != d)
+        int p, q;
+        cin >> p >> q;
+        if (abs(p - q) >= 2)
         {
-            break;
+            count++;
         }
     }
 
-    cout << y << endl;
+    cout << count << endl;
 
     return 0;
 }
