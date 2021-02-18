@@ -1,81 +1,58 @@
 
-/*
-*
-* Author : Fahim Muntashir
-* Handle: f12r
-*
-*/
 
-#include <bits/stdc++.h>
+	/*
+	*
+	* Author : Fahim Muntashir
+	* Handle: f12r
+	*
+	*/
 
-using namespace std;
+	#include <bits/stdc++.h>
 
-#define f12r ios_base::sync_with_stdio(false), cin.tie(NULL)
-const double eps = 1e-9;
-#define MOD 1000000007
-#define pi acos(-1)
-#define ll long long
-#define endl "\n"
+	using namespace std;
 
-/********** Main()  function **********/
+	#define f12r ios_base::sync_with_stdio(false), cin.tie(NULL)
+	const double eps = 1e-9;
+	#define MOD 1000000007
+	#define pi acos(-1)
+	#define ll long long
+	#define endl "\n"
 
-int main()
-{
-    set<int> s;
-    f12r;
-    int n;
-    cin >> n;
+	/********** Main()  function **********/
 
-    int p,q;
-    cin>>p>>q;
+	int main()
+	{
+		set<int>s;
+		
+		int t;
+		cin>>t;
+		
+		int p;
+		cin>>p;
+		int prr[p];
+		for(int i=0; i<p;i++){
+			cin>>prr[i];
+			s.insert(prr[i]);
+		}
+		
+		int q;
+		cin>>q;
+		int qrr[q];
+		
+		
+		 for(int i=0; i<q;i++){
+			cin>>qrr[i];
+			s.insert(qrr[i]);
+		}
+		
+		int len = s.size();
+		
+		if(len==t){
+			  cout << "I become the guy." << endl;
+	}
+		else        
+			cout << "Oh, my keyboard!" << endl;
 
-    while (p--)
-    {
-        int t;
-        cin>>t;
-        s.insert(t);
-    }
-    while (q--)
-    {
-        int t;
-        cin>>t;
-        s.insert(t);
-    }
-    
-    
-
-    // int p;
-    // cin >> p;
-    // int prr[p];
-    // int count = 0;
-    // for (int i = 0; i < p; i++)
-    // {
-    //     s.insert(prr[i]);
-    // }
-
-    // int q;
-    // cin >> q;
-    // int qrr[q];
-
-    // for (int i = 0; i < q; i++)
-    // {
-    //     s.insert(qrr[i]);
-    // }
-
-    // for(int x:s){
-    //     cout<<x<<" ";
-    // }
-    // cout<<endl;
-    // cout<<s.size();
-    if (s.size()==4)
-    {
-        cout<<"I become the guy."<<endl;
-    }else
-    {
-        cout<<"Oh, my keyboard!"<<endl;
-    }
-    
-    
-
-    return 0;
-}
+		
+		return 0;
+	}
