@@ -1,23 +1,82 @@
+// {
+// 	"version": "2.0.0",
+// 	"tasks": [
+// 		{
+// 			"type": "shell",
+// 			"label": "C/C++: gcc.exe build active file",
+// 			"command": "C:\\MinGW\\bin\\gcc.exe",
+// 			"args": [
+// 				"-g",
+// 				"${file}",
+// 				"-o",
+// 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+// 			],
+// 			"options": {
+// 				"cwd": "${workspaceFolder}"
+// 			},
+// 			"problemMatcher": [
+// 				"$gcc"
+// 			],
+// 			"group": "build"
+// 		},
+// 		{
+// 			"type": "cppbuild",
+// 			"label": "C/C++: cpp build active file",
+// 			"command": "/usr/bin/cpp",
+// 			"args": [
+// 				"-g",
+// 				"${file}",
+// 				"-o",
+// 				"${fileDirname}/${fileBasenameNoExtension}"
+// 			],
+// 			"options": {
+// 				"cwd": "${workspaceFolder}"
+// 			},
+// 			"problemMatcher": [
+// 				"$gcc"
+// 			],
+// 			"group": "build",
+// 			"detail": "compiler: /usr/bin/cpp"
+// 		},
+// 		{
+// 			"type": "cppbuild",
+// 			"label": "C/C++: cpp build active file",
+// 			"command": "/usr/bin/cpp",
+// 			"args": [
+// 				"-g",
+// 				"${file}",
+// 				"-o",
+// 				"${fileDirname}/${fileBasenameNoExtension}"
+// 			],
+// 			"options": {
+// 				"cwd": "${workspaceFolder}"
+// 			},
+// 			"problemMatcher": [
+// 				"$gcc"
+// 			],
+// 			"group": "build",
+// 			"detail": "compiler: /usr/bin/cpp"
+// 		}
+// 	]
+// }
+
+
 {
-	"version": "2.0.0",
-	"tasks": [
-		{
-			"type": "shell",
-			"label": "C/C++: gcc.exe build active file",
-			"command": "C:\\MinGW\\bin\\gcc.exe",
-			"args": [
-				"-g",
-				"${file}",
-				"-o",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe"
-			],
-			"options": {
-				"cwd": "${workspaceFolder}"
-			},
-			"problemMatcher": [
-				"$gcc"
-			],
-			"group": "build"
-		}
-	]
-}
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "g++ build active file",
+        "command": "/usr/bin/g++",
+        "args": ["-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}"],
+        "options": {
+          "cwd": "/usr/bin"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }	
