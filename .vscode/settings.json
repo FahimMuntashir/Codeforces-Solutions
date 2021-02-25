@@ -4,5 +4,6 @@
         "bitset": "c",
         "chrono": "c",
         "algorithm": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }
