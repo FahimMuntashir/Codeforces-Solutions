@@ -21,16 +21,30 @@ const double eps = 1e-9;
 
 int main()
 {
+    vector<int> x;
+    vector<int> y;
     f12r;
-    int arr[5] = {1, 5, 10, 20, 100};
-
-    ll n;
+    int n;
     cin >> n;
-    int count = 0;
-    for (int i = 4; i >= 0; i--)
+    while (n--)
     {
-        count = count + (n / arr[i]);
-        n = n % arr[i];
+        int a, b;
+        cin >> a >> b;
+        x.push_back(a);
+        y.push_back(b);
+    }
+
+    // sort(vec.begin(), vec.end());
+    int count = 0;
+    for (int i = 0; i < x.size(); i++)
+    {
+        for (int j = 0; j < y.size(); j++)
+        {
+            if (x[i] == y[j])
+            {
+                count++;
+            }
+        }
     }
 
     cout << count << endl;
