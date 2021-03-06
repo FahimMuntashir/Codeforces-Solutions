@@ -21,30 +21,32 @@ const double EPSILON = 1e-9;
 
 int main()
 {
-    vector<int> vec;
+    vector<ll> vec;
     f12r;
     ll n, k;
     cin >> n >> k;
 
-    for (int i = 1; i <= n; i++)
+    if (n % 2 == 0)
     {
-        if (i % 2 != 0)
+        if ((n / 2) >= k)
         {
-            vec.push_back(i);
+            cout << (k * 2) - 1 << endl;
+        }
+        else
+            cout << (k - (n / 2)) * 2;
+    }
+    else
+    {
+        ll mid = (n / 2) + 1;
+        if (k <= mid)
+        {
+            cout << k * 2 - 1;
+        }
+        else
+        {
+            cout << (k - mid) * 2;
         }
     }
-
-    for (int i = 2; i <= n; i++)
-    {
-        if (i % 2 == 0)
-        {
-            vec.push_back(i);
-        }
-    }
-
-    int ans = vec[k+1];
-
-    cout<<ans<<endl;
 
     return 0;
 }
